@@ -17,3 +17,6 @@ class TranslationView(APIView):
         data = _("Bangladesh 2.0")
         response = _("The current version of Bangladesh is - {version}").format(version=data)
         return Response(response)
+
+    def post(self, request, *args, **kwargs):
+        return Response({"detail": "data posted successfully"})
