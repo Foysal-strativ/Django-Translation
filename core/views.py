@@ -12,6 +12,7 @@ class PostView(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+
 class TranslationView(APIView):
     def get(self, request, *args, **kwargs):
         data = _("Bangladesh 2.0")
@@ -20,3 +21,6 @@ class TranslationView(APIView):
 
     def post(self, request, *args, **kwargs):
         return Response({"detail": "data posted successfully"})
+
+    def put(self, request, *args, **kwargs):
+        return Response({"detail": "data updated successfully"})
