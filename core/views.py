@@ -12,11 +12,6 @@ class PostView(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
-    # def get_queryset(self):
-    #     print(self.request["header"])
-    #     return Post.objects.all()
-
-
 class TranslationView(APIView):
     def get(self, request, *args, **kwargs):
         data = _("Bangladesh 2.0")
